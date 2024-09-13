@@ -1,5 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:ticket_app/screens/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -9,8 +10,8 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
- final List listItems = [
-    const Center(child: Text("Home")),
+ final listItems = [
+    const HomeScreen(),
     const Center(child: Text("Search")),
     const Center(child: Text("Ticket")),
     const Center(child: Text("Person")),
@@ -28,7 +29,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hello App Bar"),
+        // title: const Text("Hello App Bar w"),
         centerTitle: true,
       ),
       body: listItems[currentIndex],
