@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/base/bottom_nav_bar.dart';
+import 'package:ticket_app/base/widgets/all_ticket_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ticket Application',
       theme: ThemeData(),
-      home: const BottomNavBar(),
+      routes: {
+        "/": (context) => const BottomNavBar(),
+        "/all-tickets": (context) => const AllTicketList(),
+      },
       debugShowCheckedModeBanner: false,
     );
   }
