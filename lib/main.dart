@@ -12,8 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Ticket Application',
-      theme: ThemeData(
-          ),
+      theme: ThemeData(),
       home: const BottomNavBar(),
       debugShowCheckedModeBanner: false,
     );
